@@ -27,5 +27,8 @@ The `vote` app will be running at [http://localhost:8080](http://localhost:8080)
 
 # Azure DevOps pipeline
 
+
 Now we can implement this using Azure DevOps 
-![]()
+
+
+![arch](https://github.com/Ajay-Kumar2103/sample-voting-app/blob/main/Final_outputs/img11.jpeg)
