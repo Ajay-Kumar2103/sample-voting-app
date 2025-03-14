@@ -11,3 +11,8 @@ docker compose up
 ```
 
 The `vote` app will be running at [http://localhost:8080](http://localhost:8080), and the `results` will be at [http://localhost:8081](http://localhost:8081).
+
+
+# Architecture
+
+
