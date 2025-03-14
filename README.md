@@ -15,5 +15,5 @@ The `vote` app will be running at [http://localhost:8080](http://localhost:8080)
 
 # Architecture
 
-Final_outputs/architecture.excalidraw.png
+! Final_outputs/architecture.excalidraw.png
 
