@@ -23,3 +23,9 @@ The `vote` app will be running at [http://localhost:8080](http://localhost:8080)
 * A [Postgres](https://hub.docker.com/_/postgres/) database backed by a Docker volume
 * A [Node.js](/result) web app which shows the results of the voting in real time
 
+
+
+# Azure DevOps pipeline
+
+Now we can implement this using Azure DevOps 
+![]()
