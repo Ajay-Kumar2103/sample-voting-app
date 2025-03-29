@@ -368,7 +368,7 @@ kubectl get nodes -o wide
     ![image](https://github.com/user-attachments/assets/4a377d16-2807-4e32-b54d-2075caaf25a3)
 
 
-21. username == admin password is what you decoded earliar in the blog
+21. username == admin password is what you decoded earlier.
 
 
 
@@ -475,6 +475,50 @@ Here we done Continuous Deployment Part of our Application using GitOps Approach
 
 
 # Phase 3: Automating the whole cicd part
+
+1.	Go to Azure repos click on three dots and make a new repository
+
+2.	folder name==scripts , file name ==updateK8sManifests.sh
+
+3.	Use the content on filename "updateK8sManifests.sh"
+
+4.	Don’t forget to change the token name , ACR name and your organization name.
+
+
+# What Does This Script Do?
+a.	Clones a Git repository from Azure DevOps into a temporary directory.
+
+b.	Modifies a Kubernetes deployment YAML file to update the image tag.
+   
+c.	Commits and pushes the changes back to the reposit.
+   
+d.	Cleans up by deleting the temporary directory
+
+
+5. For automating the entire part, the "azure-pipelines-1.yml" has the updated stage which will run the script that we created earlier.
+
+6. Now we can make any minor change, which will trigger the "voting pipeline"
+![image](https://github.com/user-attachments/assets/1719bae5-7b71-467e-be7c-2988215e4058)
+
+7. Push Stage will push the image into ACR with the latest tag
+   
+8. Then update stage will run the script that update the image name in the deployment.yaml with the latest tag
+   
+9. Argocd will look for a change in k8s-specifications folder and found a new image as the tag was changed to latest one
+
+10. As this change in the k8s-specifications folder will envoke the argocd to change application according to new image.
+
+11. Need to create principle id with secret, so that the image will be pulled from private registry.
+![image](https://github.com/user-attachments/assets/ceabea39-ea78-449f-974f-3a096ba0a396)
+argo-cd envoke as it founds the change in vote- deployment.yaml
+
+
+12. Go to your Web browser and and check for the change
+
+
+
+
+
 
 
 
